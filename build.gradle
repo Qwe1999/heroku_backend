@@ -1,15 +1,16 @@
+
 apply plugin: 'java'
 apply plugin: 'war'
-
 group 'softserve.academy'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+    maven {
+        url("https://repo1.maven.org/maven2/")
+    }
 }
-
 configurations.all {
     exclude group: "commons-logging", module: "commons-logging"
 }
@@ -33,7 +34,9 @@ test{
 
 test.onlyIf {false}
 
+
 dependencies {
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.5.2'
