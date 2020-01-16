@@ -109,5 +109,5 @@ dependencies {
     compile "org.springframework.security:spring-security-oauth2-client"
 
 
-    compile 'com.github.jsimone:webapp-runner:8.5.11.3'
+    compile 'com.github.jsimone:webapp-runner:7.0.91.0'
 }
