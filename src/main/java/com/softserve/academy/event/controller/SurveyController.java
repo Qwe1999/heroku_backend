@@ -27,7 +27,7 @@ import java.util.List;
 
 @Api(value = "/survey")
 @RestController
-@RequestMapping("survey")
+@RequestMapping("/survey")
 @Slf4j
 public class SurveyController {
 
@@ -82,7 +82,6 @@ public class SurveyController {
         service.delete(id);
         return ResponseEntity.ok(HttpStatus.OK);
     }
-
     @PostMapping(value = "/createNewSurvey")
     public ResponseEntity saveSurvey(@RequestBody SaveSurveyDTO saveSurveyDTO) throws IOException {
         Survey survey = saveQuestionMapper.toSurvey(saveSurveyDTO);
