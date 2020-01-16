@@ -1,1 +1,1 @@
-web: build/libs/EventTable-1.0-SNAPSHOT.war java -jar build/server/webapp-runner-*.jar
+web:  java -jar build/server/webapp-runner-*.jar build/libs/EventTable-1.0-SNAPSHOT.war
