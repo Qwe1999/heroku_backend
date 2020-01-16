@@ -64,7 +64,7 @@ dependencies {
     compile 'ch.qos.logback:logback-classic:1.1.3'
 
     /* SERVLET */
-    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 
     /* DATABASE */
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.8'
@@ -102,7 +102,7 @@ dependencies {
     /* SOCIAL */
     compile group: 'org.springframework.security', name: 'spring-security-oauth2-client', version: '5.2.1.RELEASE'
     compile group: 'org.springframework.security', name: 'spring-security-oauth2-jose', version: '5.2.1.RELEASE'
-    providedCompile group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.1.0.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.1.0.RELEASE'
     compile "org.springframework.security:spring-security-oauth2-client"
 
 
