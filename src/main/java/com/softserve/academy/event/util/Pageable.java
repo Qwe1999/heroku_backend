@@ -14,6 +14,16 @@ public class Pageable {
     int size;
     int currentPage;
     int lastPage;
-    Sort sort;
+    private Direction direction;
+    private String sort;
+
+    public String sorting() {
+        return sort + " " + direction.name();
+    }
+
+    public enum Direction{
+        ASC,
+        DESC;
+    }
 
 }

@@ -1,14 +1,14 @@
 package com.softserve.academy.event.entity.enums;
 
-import org.springframework.security.core.GrantedAuthority;
+public enum Roles {
+    USER("USER"),
+    MANAGER("MANAGER");
 
-public enum Roles implements GrantedAuthority {
-    USER,
-    MANAGER;
+    private String name;
 
-    @Override
-    public String getAuthority() {
-        return name();
+    Roles(String name) {
+        this.name = name;
     }
+
 
 }
