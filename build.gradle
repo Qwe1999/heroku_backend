@@ -108,6 +108,5 @@ dependencies {
     compile group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.1.0.RELEASE'
     compile "org.springframework.security:spring-security-oauth2-client"
 
-
-    compile 'com.github.jsimone:webapp-runner:7.0.91.0'
+    compile 'com.github.jsimone:webapp-runner:9.0.27.1'
 }
