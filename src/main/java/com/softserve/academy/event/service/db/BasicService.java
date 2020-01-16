@@ -7,8 +7,13 @@ import java.util.Optional;
 public interface BasicService<T extends Serializable, I extends Serializable> {
 
     Optional<T> findFirstById(I id);
+
     List<T> findAll();
+
     T save(T entity);
+
     T update(T object);
-    void deleteById(I id);
+
+    void delete(T entity);
+
 }

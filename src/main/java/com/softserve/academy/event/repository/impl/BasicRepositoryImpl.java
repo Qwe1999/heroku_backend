@@ -34,7 +34,7 @@ public abstract class BasicRepositoryImpl<T extends Serializable, I extends Seri
 
     @Override
     public Optional<T> findFirstById(I id) {
-        return Optional.ofNullable(sessionFactory.getCurrentSession().get(clazz,id));
+        return Optional.ofNullable(sessionFactory.getCurrentSession().get(clazz, id));
     }
 
     @Override
@@ -55,11 +55,6 @@ public abstract class BasicRepositoryImpl<T extends Serializable, I extends Seri
     public void delete(T entity) {
         sessionFactory.getCurrentSession()
                 .remove(entity);
-    }
-
-    @Override
-    public void detach(T entity){
-        sessionFactory.getCurrentSession().detach(entity);
     }
 
 }

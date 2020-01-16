@@ -44,9 +44,17 @@ public class HibernateConfig {
             log.error(e.getMessage());
             System.exit(1);
         }
-        dataSource.setJdbcUrl(Objects.requireNonNull(environment.getProperty(URL)));
-        dataSource.setUser(Objects.requireNonNull(environment.getProperty(USER)));
-        dataSource.setPassword(Objects.requireNonNull(environment.getProperty(PASS)));
+
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        String username = System.getenv("JDBC_DATABASE_USERNAME");
+        String password = System.getenv("JDBC_DATABASE_PASSWORD");
+
+        dataSource.setJdbcUrl(dbUrl);
+        dataSource.setUser(username);
+        dataSource.setPassword(password);
+//        dataSource.setJdbcUrl(Objects.requireNonNull(environment.getProperty(URL)));
+//        dataSource.setUser(Objects.requireNonNull(environment.getProperty(USER)));
+//        dataSource.setPassword(Objects.requireNonNull(environment.getProperty(PASS)));
         return dataSource;
     }
 
@@ -78,5 +86,4 @@ public class HibernateConfig {
         transactionManager.setSessionFactory(getSessionFactory().getObject());
         return transactionManager;
     }
-
 }

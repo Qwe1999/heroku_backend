@@ -2,7 +2,7 @@
 <configuration debug="true">
 
 
-    <property name="USER_HOME" value="D://logs" />
+    <property name="USER_HOME" value="D://logs"/>
 
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
