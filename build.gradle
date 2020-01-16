@@ -14,20 +14,20 @@ repositories {
 configurations.all {
     exclude group: "commons-logging", module: "commons-logging"
 }
-//
-//task stage() {
-//    dependsOn clean, war
-//}
-//war.mustRunAfter clean
-//
-//task copyToLib(type: Copy) {
-//    into "$buildDir/server"
-//    from(configurations.compile) {
-//        include "webapp-runner*"
-//    }
-//}
-//
-//stage.dependsOn(copyToLib)
+
+task stage() {
+    dependsOn clean, war
+}
+war.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
+}
+
+stage.dependsOn(copyToLib)
 test{
     useJUnitPlatform()
 }
@@ -108,5 +108,5 @@ dependencies {
     compile group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.1.0.RELEASE'
     compile "org.springframework.security:spring-security-oauth2-client"
 
-    compile 'com.github.jsimone:webapp-runner:9.0.27.1'
+    compile 'com.github.jsimone:webapp-runner:8.5.47.2'
 }
