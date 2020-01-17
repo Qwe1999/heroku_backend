@@ -7,9 +7,7 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-    maven {
-        url("https://repo1.maven.org/maven2/")
-    }
+    mavenCentral()
 }
 configurations.all {
     exclude group: "commons-logging", module: "commons-logging"
